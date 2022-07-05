@@ -57,7 +57,7 @@ set t_Co=256
 colorscheme gruvbox
 let python_highlight_all = 1
 
-set path+=../**
+set path+=~/project/**
 set nocompatible
 set number
 set relativenumber
