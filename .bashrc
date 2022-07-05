@@ -118,4 +118,4 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-alias project="source /home/hbb/fastapi/venv/bin/activate" 
+alias project="source /home/hbb/project/venv/bin/activate" 
