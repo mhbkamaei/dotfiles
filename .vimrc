@@ -1,7 +1,7 @@
 autocmd BufEnter * lcd %:p:h
 filetype on
 syntax on
-" VIM-PLUGIN SECTION {{{
+"  VIM-PLUGIN SECTION {{{
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
