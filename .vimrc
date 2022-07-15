@@ -55,6 +55,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 set t_Co=256
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 let python_highlight_all = 1
 
 set path+=~/project/**
