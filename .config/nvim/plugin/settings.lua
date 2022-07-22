@@ -1,7 +1,6 @@
 ﻿vim.o.background = "dark"
 --vim.cmd([[colorscheme gruvbox]])
 vim.lsp.set_log_level("debug")
-vim.cmd 'colorscheme gruvbox'
 vim.o.showbreak = '↪'
 vim.o.list = true 
 --vim.opt.listchars = { space = '_', tab = '‣', trail='•', precedes='«', extends='»', eol='⏎', nbsp='⏎'}
@@ -27,3 +26,4 @@ vim.o.hidden = true
 vim.o.wildmenu = true
 vim.o.timeoutlen = 500
 vim.o.wildmode = "longest,full,full"
+vim.cmd[[colorscheme nord]]

@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/hbb/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/hbb/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -78,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hbb/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  rnvimr = {
+    loaded = true,
+    path = "/home/hbb/.local/share/nvim/site/pack/packer/start/rnvimr",
+    url = "https://github.com/kevinhwang91/rnvimr"
   },
   ["telescope.nvim"] = {
     loaded = true,

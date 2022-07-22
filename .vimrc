@@ -26,6 +26,8 @@ let g:fzf_preview_window = 'right:50%'
 let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6  }  }
 " }}}
 
+highlight Normal ctermbg=000000CC
+highlight NonText ctermbg=000000CC
 
 "
 " NOREMAP SECTION {{{

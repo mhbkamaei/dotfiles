@@ -67,6 +67,7 @@ completions=(
 # Custom aliases may be added to ~/.oh-my-bash/custom/aliases/
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
+alias fd=fdfind
 aliases=(
   general
 )

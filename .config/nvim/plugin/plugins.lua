@@ -11,5 +11,14 @@ return require('packer').startup(function()
     use {
         'hrsh7th/cmp-nvim-lua'
     }
-
+    use {
+        'kevinhwang91/rnvimr'
+    }
+    use {
+        'shaunsingh/nord.nvim'
+    }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
