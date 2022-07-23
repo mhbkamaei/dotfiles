@@ -21,4 +21,8 @@ return require('packer').startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use {
+        'norcalli/nvim-colorizer.lua'
+    }
+
 end)
