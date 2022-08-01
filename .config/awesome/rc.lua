@@ -1,6 +1,5 @@
 local n = require("naughty")
 pcall(require, "luarocks.loader")
-
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -48,6 +47,7 @@ local binding = {
 -- a variable needed in main.tags, and statusbar
 -- awful.layout.layouts = { ... }
 RC.layouts = main.layouts()
+
 -- }}}
 
 -- {{{ Tags
@@ -100,5 +100,5 @@ require("main.signals")
 -- }}}
 
 --{{{ Application Starts
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 --}}}
