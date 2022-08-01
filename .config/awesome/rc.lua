@@ -1,3 +1,4 @@
+require("awful.autofocus")
 local n = require("naughty")
 pcall(require, "luarocks.loader")
 -- Standard awesome library
