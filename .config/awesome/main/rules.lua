@@ -67,7 +67,7 @@ function _M.get(clientkeys, clientbuttons)
         type = { "normal", "dialog" }
       }, 
       properties = { 
-        titlebars_enabled = true
+        titlebars_enabled = false
       }
     },
 
