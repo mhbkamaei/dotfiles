@@ -7,3 +7,10 @@ grave ;{h,j,k,l}
 
 super + shift + r
     pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+
+awesome-client '
+naughty = require("naughty")
+naughty.notify({
+title="CLI Notification",
+text="This is a notification sent from the command line!"})
+'
