@@ -1,0 +1,2 @@
+exec sxhkd &
+exec picom &
