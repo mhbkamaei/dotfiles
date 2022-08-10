@@ -2,7 +2,7 @@
 
 cp sources.list /etc/apt/
 
-packages="stow kitty lightdm sudo git neovim sxhkd picom nitrogen zsh xserver-xorg-core xinit slick-greeter awesome"
+packages="stow bash-completion kitty lightdm sudo git neovim sxhkd picom nitrogen zsh xserver-xorg-core xinit slick-greeter awesome"
 
 apt update
 apt upgrade -y
