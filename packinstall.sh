@@ -2,7 +2,7 @@
 
 cp sources.list /etc/apt/
 
-packages="sudo git neovim sxhkd zsh xserver-xorg-core xinit"
+packages="lightdm sudo git neovim sxhkd picom nitrogen zsh xserver-xorg-core xinit slick-greeter"
 
 apt update
 apt upgrade -y
