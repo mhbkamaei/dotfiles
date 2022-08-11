@@ -4,14 +4,9 @@ return require('packer').startup(function()
     use {
         'wbthomason/packer.nvim'
     }
-    
     use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        'williamboman/nvim-lsp-installer'
     }
-        
     use {
         'neovim/nvim-lspconfig'
     }
@@ -39,14 +34,16 @@ return require('packer').startup(function()
         'kevinhwang91/rnvimr'
     }
     use {
-        'shaunsingh/nord.nvim'
+        'ellisonleao/gruvbox.nvim'
+    }
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
     }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {
-        'norcalli/nvim-colorizer.lua'
-    }
-
 end)
