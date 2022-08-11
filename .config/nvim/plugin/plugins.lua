@@ -20,10 +20,6 @@ return require('packer').startup(function()
         'windwp/nvim-autopsirs'
     }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
-    use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
@@ -35,6 +31,13 @@ return require('packer').startup(function()
     }
     use {
         'ellisonleao/gruvbox.nvim'
+    }
+    use {
+        'noricalli/nvim-colorize'
+    }
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {
         'numToStr/Comment.nvim',
