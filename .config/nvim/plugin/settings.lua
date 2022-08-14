@@ -1,5 +1,7 @@
 ﻿vim.o.background = "dark"
 --vim.cmd([[colorscheme gruvbox]])
+vim.opt.laststatus=3
+vim.highlight.create('WinSeparator', {ctermbg=0, guibg=none}, false)
 vim.lsp.set_log_level("debug")
 vim.o.showbreak = '↪'
 vim.o.list = true 
