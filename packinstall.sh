@@ -6,4 +6,3 @@ apt update
 apt upgrade -y
 apt install $packages --no-install-recommends --no-install-suggests -y
 apt install ../lsd_0.22.0._amd64.deb
-stow --verbose --adopt --dir=/home/hbb/dotfiles/ --target=/home/hbb/ .
