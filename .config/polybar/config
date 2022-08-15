@@ -1,33 +1,5 @@
-
-;==========================================================
-;
-; THIS IS AN EXAMPLE CONFIGURATION FILE!
-; IT IS NOT SUPPOSED TO WORK OUT OF THE BOX SINCE IS CONTAINS
-; SETTINGS THAT ARE SPECIFIC TO THE MACHINE WHICH WAS USED
-; TO GENERATE IT.
-; Please refer to the web documentation hosted at:
-; https://github.com/polybar/polybar#configuration
-; and
-; https://github.com/polybar/polybar/wiki/Configuration
-; if you want to automatically generate one for you.
-;
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
+include-file = ~/.config/polybar/color
+include-file = ~/.config/polybar/modules
 
 [colors]
 ;background = #999
