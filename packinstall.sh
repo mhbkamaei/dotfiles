@@ -1,6 +1,6 @@
 #!/bin/bash
 
-packages="unzip neovim vim stow zsh lightdm sxhkd picom feh xserver-xorg-core xinit slick-greeter bspwm dmenu"
+packages="unzip neovim kitty vim stow zsh lightdm sxhkd picom feh xserver-xorg-core xinit slick-greeter bspwm dmenu"
 
 apt update
 apt upgrade -y
