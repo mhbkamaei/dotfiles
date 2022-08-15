@@ -1,0 +1,41 @@
+[module/launcher]
+type = custom/text
+content = 鸞
+content-font = 2
+
+; "content" has the same properties as "format-NAME"
+content-background = ${colors.background}
+content-foreground = ${colors.yellow}
+content-padding = 2
+
+; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c $COMMAND"
+click-left = ~/.config/rofi/scripts/appsmenu.sh
+
+[module/power]
+type = custom/text
+content = 
+content-font = 2
+
+content-background = ${colors.background}
+content-foreground = ${colors.red}
+content-padding = 2
+
+click-left = ~/.config/rofi/scripts/powermenu.sh 
+
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+interval = 1
+click-left = rofi-bluetooth &
+;format-background = ${colors.background}
+format-foreground = ${colors.blue}
+#format-underline= #5555ff
+format-padding = 1
+
+[module/clipboard]
+type = custom/text
+content = %{T3}%{T-}
+content-background = ${colors.background}
+content-foreground = ${colors.blue}
+content-padding = 1
+click-left = ~/.scripts/greenclip
