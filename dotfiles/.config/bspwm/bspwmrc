@@ -1,5 +1,9 @@
 #!/bin/sh
 
+bspc rule -r "*"
+
+###---Autostart---###
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.config/polybar/launch.sh &
 feh --bg-fill -z ~/.wallpaper &
@@ -8,6 +12,31 @@ pkill picom; picom -b --experimental-backends &
 pkill polybar; sh ~/.config/polybar/launch.sh --forest &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc config automatic_scheme alternate
+bspc config initial_polarity second_child
+bspc config pointer_modifier lock
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus none
+bspc config focus_follows_pointer true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+bspc config top_padding 32
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config border_width 2
+bspc config window_gap 10
+###---Rules---###
+bspc rule -a mpv state=fullscreen
+bspc rule -a Zathura state=tiled
+bspc rule -a Screenkey manage=off
+bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
+
+
 bspc config split_ratio             0.52
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
