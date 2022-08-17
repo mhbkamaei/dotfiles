@@ -1,5 +1,7 @@
-stow --verbose --adopt --dir=/home/hbb/rising/dotfiles/ --target=/home/hbb/ .
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+mkdir ~/.config/zsh-plugins 
+mkdir ~/.config/zsh-themes
+stow --verbose --adopt --dir=/home/hbb/debian/dotfiles/ --target=/home/hbb/ .
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git   ~/.config/zsh-themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions         ~/.config/zsh-plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh-plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/wbthomason/packer.nvim      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
