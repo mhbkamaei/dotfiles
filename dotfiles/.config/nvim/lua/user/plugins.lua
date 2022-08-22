@@ -17,7 +17,7 @@ return require('packer').startup(function()
         'hrsh7th/cmp-nvim-lsp'
     }
     use {
-        'windwp/nvim-autopsirs'
+        'windwp/nvim-autopairs'
     }
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -33,17 +33,14 @@ return require('packer').startup(function()
         'ellisonleao/gruvbox.nvim'
     }
     use {
-        'noricalli/nvim-colorize'
+        'norcalli/nvim-colorizer.lua'
     }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        'numToStr/Comment.nvim'
     }
     use {
         'nvim-lualine/lualine.nvim',
