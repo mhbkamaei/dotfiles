@@ -1,9 +1,9 @@
 #!/bin/bash
 
 utills="unzip neovim kitty vim stow"
-zsh="zsh zsh-antigen zsh-autosuggestions zsh-syntax-highlighting"
-xorg="xserver-xorg-core xinit lightdm slick-greeter"
-wm="sxhkd picom feh bspwm rofi"
+zsh="zsh zsh-antigen"
+xorg="xserver-xorg-core xinit xclip lightdm slick-greeter"
+wm="sxhkd picom feh bspwm rofi dunst"
 
 apt update
 apt upgrade -y
