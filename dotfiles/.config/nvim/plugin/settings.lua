@@ -12,6 +12,7 @@ vim.opt.listchars:append({ extends = "»" })
 vim.opt.listchars:append({ precedes = "«" })
 vim.opt.listchars:append({ eol = "⏎" })
 vim.opt.listchars:append({ space = "_" })
+vim.api.nvim_set_option("clipboard","unnamed")
 vim.o.compatible = false
 vim.o.swapfile = false
 vim.o.ignorecase = true
