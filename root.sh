@@ -2,7 +2,7 @@
 
 utills="unzip neovim kitty vim stow"
 zsh="zsh zsh-antigen"
-xorg="xserver-xorg-core xinit lightdm slick-greeter"
+xorg="xserver-xorg-core xinit xclip lightdm slick-greeter"
 wm="sxhkd picom feh bspwm rofi dunst"
 
 apt update
