@@ -4,6 +4,9 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim'
     }
     use {
+        'onsails/lspkind.nvim'
+    }
+    use {
         'williamboman/nvim-lsp-installer'
     }
     use {
@@ -27,11 +30,11 @@ return require('packer').startup(function()
     use {
         'hrsh7th/cmp-nvim-lua'
     }
+    -- use {
+    --     'hrsh7th/cmp-vsnip'
+    -- }
     use {
-        'hrsh7th/cmp-vsnip'
-    }
-    use {
-        'hrsh7th/vim-vsnip'
+        'saadparwaiz1/cmp_luasnip'
     }
     use {
         'windwp/nvim-autopairs'
