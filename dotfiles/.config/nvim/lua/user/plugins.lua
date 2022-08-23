@@ -1,5 +1,4 @@
 return require('packer').startup(function()
-    
     -- Packer can manage itself
     use {
         'wbthomason/packer.nvim'
@@ -11,10 +10,28 @@ return require('packer').startup(function()
         'neovim/nvim-lspconfig'
     }
     use {
+        'hrsh7th/cmp-nvim-lsp'
+    }
+    use {
+        'hrsh7th/cmp-buffer'
+    }
+    use {
+        'hrsh7th/cmp-path'
+    }
+    use {
+        'hrsh7th/cmp-cmdline'
+    }
+    use {
         'hrsh7th/nvim-cmp'
     }
     use {
-        'hrsh7th/cmp-nvim-lsp'
+        'hrsh7th/cmp-nvim-lua'
+    }
+    use {
+        'hrsh7th/cmp-vsnip'
+    }
+    use {
+        'hrsh7th/vim-vsnip'
     }
     use {
         'windwp/nvim-autopairs'
@@ -22,9 +39,6 @@ return require('packer').startup(function()
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
-    }
-    use {
-        'hrsh7th/cmp-nvim-lua'
     }
     use {
         'kevinhwang91/rnvimr'

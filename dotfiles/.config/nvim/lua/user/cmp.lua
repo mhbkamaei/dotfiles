@@ -15,8 +15,8 @@ local cmp = require'cmp'
       -- documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp.mapping.select_prev_item(select_opts),
-        ['<S-Tab>'] = cmp.mapping.select_next_item(select_opts),
+      ['<Tab>'] = cmp.mapping.select_prev_item(select_opts),
+      ['<S-Tab>'] = cmp.mapping.select_next_item(select_opts),
       ['<Tab>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),

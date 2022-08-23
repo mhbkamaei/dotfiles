@@ -21,6 +21,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wl', function()
+      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
 
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
@@ -32,23 +33,17 @@ end
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-local nvim_lsp = require('lspconfig')
 
-local servers = {
-	"pyright",
-}
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-  }
-end
-nvim_lsp.sumneko_lua.setup {
+}
+require('lspconfig')['sumneko_lua'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -56,6 +51,7 @@ nvim_lsp.sumneko_lua.setup {
         Lua = {
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
+                globals = {'use'},
                 globals = {'vim'},
             },
         },
