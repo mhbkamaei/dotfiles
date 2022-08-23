@@ -34,6 +34,9 @@ return require('packer').startup(function()
     --     'hrsh7th/cmp-vsnip'
     -- }
     use {
+        'L3MON4D3/LuaSnip'
+    }
+    use {
         'saadparwaiz1/cmp_luasnip'
     }
     use {

@@ -8,7 +8,7 @@ pgrep -x nm-applet > /dev/null || nm-applet &
 feh --bg-fill ~/Downloads/wallpaper.jpg
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_width         4
+bspc config border_width         3
 bspc config window_gap           5
 
 bspc config top_padding 	 32

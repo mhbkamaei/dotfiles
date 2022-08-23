@@ -1,4 +1,5 @@
 require("nvim-lsp-installer").setup {}
+local nvim_lsp = require'lspconfig'
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -38,19 +39,20 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['pyright'].setup{
+nvim_lsp['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    root_dir = nvim_lsp.util.root_pattern('.git'),
 }
-require('lspconfig')['sumneko_lua'].setup {
+nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    root_dir = nvim_lsp.util.root_pattern('.git'),
     settings = {
         Lua = {
             diagnostics = {
-                -- Get the language server to recognize the `vim` global
                 globals = {'use'},
                 globals = {'vim'},
             },
