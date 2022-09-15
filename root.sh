@@ -1,8 +1,8 @@
 #!/bin/bash
 
-utills="unzip neovim kitty vim stow"
+utills="unzip neovim kitty stow"
 zsh="zsh zsh-antigen"
-xorg="xserver-xorg-core xinit xclip lightdm slick-greeter"
+xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter"
 wm="sxhkd picom feh bspwm rofi dunst"
 
 apt update
@@ -11,4 +11,5 @@ apt install $xorg   --no-install-recommends --no-install-suggests -y
 apt install $zsh    --no-install-recommends --no-install-suggests -y
 apt install $utills --no-install-recommends --no-install-suggests -y
 apt install $wm     --no-install-recommends --no-install-suggests -y
-apt install ./lsd_0.22.0_amd64.deb
+
+chsh hbb -s /bin/zsh
