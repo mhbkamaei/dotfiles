@@ -21,5 +21,5 @@ export EDITOR=nvim
 alias c='clear'
 alias vi='nvim'
 alias ls='exa'
-alias ll='exa -alh'
+alias ll='exa -alh --icons'
 alias myip="curl https://plaintextip.com; echo"
