@@ -15,7 +15,7 @@ super + r
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'rebooted'
+	pkill -USR1 -x sxhkd; dunstify 'sxhkd' 'rebooted'
 
 #
 # bspwm hotkeys
