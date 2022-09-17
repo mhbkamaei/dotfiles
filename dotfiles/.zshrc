@@ -19,7 +19,11 @@ source ~/.p10k.zsh
 export EDITOR=nvim
 
 alias c='clear'
+alias cat='batcat'
 alias vi='nvim'
 alias ls='exa'
 alias ll='exa -alh --icons'
 alias myip="curl https://plaintextip.com; echo"
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/dotfiles/.p10k.zsh.
+[[ ! -f ~/.dotfiles/dotfiles/.p10k.zsh ]] || source ~/.dotfiles/dotfiles/.p10k.zsh
