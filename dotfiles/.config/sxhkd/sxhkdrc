@@ -9,6 +9,8 @@ super + Return
 super + f
 	firefox
 
+super + g
+	gimp
 # program launcher
 super + r
 	rofi -show drun
