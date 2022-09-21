@@ -35,7 +35,7 @@ font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = date
-modules-right = filesystem xkeyboard memory cpu temperature powermenu
+modules-right = filesystem xkeyboard memory cpu temperature powermenu keyboard
 
 tray-position = right
 tray-padding = 2
@@ -54,19 +54,28 @@ override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
+[module/ate]
+type = custom/script
+exec = ~/.config/polybar/scripts/kb.sh
+tail = true
+click-left = 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
+;format = <label-layout>
 ;blacklist-0 = num lock
+;blacklist-1 = caps lock
+layout-icon-0 = pc_us_ir_2_inet;US
+layout-icon-1 = ;IR
+
+label-layout-foreground = ${colors.foreground-alt}
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-
-label-layout = %layout%
+label-layout = %icon%
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -131,6 +140,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
+label-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
 [module/memory]
@@ -138,6 +148,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
+label-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
 [module/wlan]
@@ -287,6 +298,7 @@ format = <label>
 format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
+label-foreground = ${colors.foreground-alt}
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
