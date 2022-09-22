@@ -29,4 +29,3 @@ vim.o.hidden = true
 vim.o.wildmenu = true
 vim.o.timeoutlen = 500
 vim.o.wildmode = "longest,full,full"
-vim.cmd[[colorscheme gruvbox]]
