@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+class="$(xdotool search --class scpad)"
+
+if [ -z "$class" ]; then
+    kitty --class scpad
+else
+    if [ ! -f /tmp/scpad ]; then
+        touch /tmp/scpad && xdo hide "$class"
+    else
+        rm    /tmp/scpad && xdo show "$class"
+    fi
+fi

@@ -1,10 +1,12 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 super + Return
 	kitty
+
+super + alt + Return
+	~/.local/scripts/scpad
+
+super + z
+	feh --recursive --bg-fill --randomize ~/.config/wallpapers/
 
 super + f
 	firefox
@@ -25,7 +27,7 @@ super + Escape
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	bspc {quit,wm -r};dunstify 'bspwm' 'rebooted'
 
 # close and kill
 super + {_,shift + }w

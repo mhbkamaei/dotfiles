@@ -4,7 +4,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x picom > /dev/null || picom &
 pgrep -x nm-applet > /dev/null || nm-applet &
-feh --bg-fill ~/.config/wallpapers/gruv-coffee.png
+feh --recursive --bg-fill --randomize ~/.config/wallpapers
 ~/.config/polybar/launch.sh &
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -27,6 +27,7 @@ bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a scpad sticky=off state=floating rectangle=960x540+480+270
 
 bspc config normal_border_color "#282828"
 bspc config focused_border_color "#fe8019"
