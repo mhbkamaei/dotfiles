@@ -79,7 +79,7 @@ label-layout-foreground = ${colors.foreground-alt}
 
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
-label-layout =  %icon%
+label-layout =  %icon%%layout%
 
 label-indicator-padding = 2
 label-indicator-margin = 1
