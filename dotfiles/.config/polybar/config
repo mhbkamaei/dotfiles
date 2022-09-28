@@ -1,5 +1,5 @@
 [colors]
-background = #1d2021
+background = #e51d2021
 background-alt = #32302f
 foreground = #ebdbb2
 foreground-alt = #a89984
@@ -9,6 +9,7 @@ alert = #cc241d
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
+double-click-left = kitty vi ~/.config/polybar/config
 width = 100%
 height = 27
 ;offset-x = 0
@@ -35,7 +36,7 @@ font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = date
-modules-right = backlight xkeyboard filesystem memory cpu temperature rofi
+modules-right = pulseaudio xkeyboard filesystem memory cpu temperature rofi
 
 tray-position = right
 tray-padding = 2
@@ -208,22 +209,25 @@ label = %date%  %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume = 
+;%percentage%%
+label-volume-foreground = ${colors.foreground-alt}
+format-bar-foreground = ${colors.foreground-alt}
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted = %percentage%% 
+label-muted-foreground = ${colors.foreground-alt}
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
+bar-volume-width = 9
+bar-volume-foreground-0 = #fff
+bar-volume-foreground-1 = #fff
+bar-volume-foreground-2 = #fff
+bar-volume-foreground-3 = #fff
+bar-volume-foreground-4 = #fff
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = 
+bar-volume-indicator-foreground = #fff 
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
