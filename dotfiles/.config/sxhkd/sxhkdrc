@@ -61,6 +61,10 @@ super + ctrl + {m,x,y,z}
 # focus/swap
 #
 
+# toggle floating and tiling
+super + o
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -88,8 +92,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {1-9,0}
+	bspc desktop -f ^{1-9,10}
 
 #
 # preselect
@@ -114,6 +118,12 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+
+# move a window to other desktop and follow
+super + alt + {1-9,0}
+    ID=^{1-9,10}; \
+    bspc node -d "$ID" --follow; \
+    bspc desktop -f "$ID"
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
