@@ -136,3 +136,26 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# pulseaudio
+#
+
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +10%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -10%
+
+#
+# brightness
+#
+
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
