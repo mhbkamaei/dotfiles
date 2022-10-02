@@ -4,15 +4,18 @@ super + Return
 
 super + alt + Return
 	~/.local/scripts/scpad
-
+# lock screen
+alt + d
+    sleep 0.1;xset dpms force off
+# change wallpaper randomly
 super + z
 	feh --recursive --bg-fill --randomize ~/.config/wallpapers/
-
+# open browser
 super + f
 	firefox
-
-super + g
-	gimp
+# video player
+super + v
+	vlc
 # program launcher
 super + r
 	rofi -show drun
