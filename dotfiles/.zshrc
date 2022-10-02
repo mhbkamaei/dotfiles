@@ -29,6 +29,7 @@ alias ls='exa --icons'
 alias ll='exa -alh --icons'
 alias myip="curl https://plaintextip.com; echo"
 alias stowit="stow -vt ~ ."
+alias 'ai'='sudo apt --no-install-recommends --no-install-suggests install'
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/dotfiles/.p10k.zsh ]] || source ~/.dotfiles/dotfiles/.p10k.zsh
