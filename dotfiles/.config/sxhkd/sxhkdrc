@@ -18,7 +18,7 @@ super + v
 	vlc
 # program launcher
 super + r
-	rofi -show drun
+	rofi -show drun -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
