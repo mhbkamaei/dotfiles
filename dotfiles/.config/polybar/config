@@ -34,7 +34,7 @@ module-margin-right = 1
 
 font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 
-modules-left = bspwm
+modules-left = state bspwm 
 modules-center = date
 modules-right = backlight pulseaudio xkeyboard filesystem memory cpu temperature rofi
 
@@ -124,6 +124,17 @@ label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+[module/state]
+type = internal/bspwm
+label-tiled= "  "
+label-monocle= " "
+label-fullscreen= " "
+label-floating= "﯑ "
+label-locked = " "
+label-marked = "車 "
+label-sticky = " "
+label-private = " "
+format = <label-mode>
 ; Separator in between workspaces
 ; label-separator = |
 
