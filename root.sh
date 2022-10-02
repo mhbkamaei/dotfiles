@@ -1,6 +1,6 @@
 #!/bin/bash
 
-utills="unzip neovim kitty stow exa ranger xdotool"
+utills="unzip neovim kitty stow exa ranger xdotool brightnessctl"
 zsh="zsh zsh-antigen"
 xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter"
 wm="sxhkd picom feh bspwm rofi dunst polybar"

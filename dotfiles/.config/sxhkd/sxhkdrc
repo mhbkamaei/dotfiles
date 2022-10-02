@@ -25,9 +25,6 @@ super + Escape
 # bspwm hotkeys
 #
 
-super + o
-    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
-
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r};dunstify 'bspwm' 'rebooted'
@@ -64,6 +61,10 @@ super + ctrl + {m,x,y,z}
 # focus/swap
 #
 
+# toggle floating and tiling
+super + o
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -92,7 +93,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+	bspc desktop -f ^{1-9,10}
 
 #
 # preselect
@@ -118,8 +119,11 @@ super + ctrl + shift + space
 # move/resize
 #
 
+# move a window to other desktop and follow
 super + alt + {1-9,0}
-    bspc node -d '^{1-9,10}' && bspc desktop -f '^{1-9,10}'
+    ID=^{1-9,10}; \
+    bspc node -d "$ID" --follow; \
+    bspc desktop -f "$ID"
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
@@ -132,3 +136,27 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
     bspc node -v {-20 0,0 20,0 -20,20 0}
 super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# pulseaudio
+#
+
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +10%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -10%
+
+#
+# brightness
+#
+
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
