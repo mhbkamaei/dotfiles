@@ -3,17 +3,19 @@ background = #e51d2021
 background-alt = #32302f
 foreground = #ebdbb2
 foreground-alt = #a89984
-primary = #fe8019
+primary = #d65d0e
 secondary = #fb4934
 alert = #cc241d
+aquaD = #427b58
+aquaL = #689d6a
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
 double-click-left = kitty vi ~/.config/polybar/config
 width = 100%
 height = 27
-;offset-x = 0
-;offset-y = 0
+offset-x = 0
+offset-y = 0
 radius = 0.0
 fixed-center = true
 
@@ -23,9 +25,6 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
-
 padding-left = 1
 padding-right = 1
 
@@ -34,13 +33,13 @@ module-margin-right = 1
 
 font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 
-modules-left = state bspwm 
+modules-left = mode bspwm 
 modules-center = date
 modules-right = backlight pulseaudio xkeyboard filesystem memory cpu temperature rofi
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
+tray-background = ${colors.aquaL}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -123,10 +122,11 @@ label-urgent-padding = 2
 label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
+format = <label-state>
 
-[module/state]
+[module/mode]
 type = internal/bspwm
-label-tiled= "  "
+label-tiled= "  "
 label-monocle= " "
 label-fullscreen= " "
 label-floating= "﯑ "
@@ -134,9 +134,10 @@ label-locked = " "
 label-marked = "車 "
 label-sticky = " "
 label-private = " "
+label-tiled-foreground = ${colors.primary}
+label-floating-foreground = #cc241a
+label-monocle-foreground = #cc241a
 format = <label-mode>
-; Separator in between workspaces
-; label-separator = |
 
 [module/mpd]
 type = internal/mpd
@@ -147,7 +148,6 @@ icon-stop = 
 icon-play = 
 icon-pause = 
 icon-next = 
-
 label-song-maxlen = 25
 label-song-ellipsis = true
 
