@@ -1,4 +1,4 @@
-include-file = ./colors
+include-file = ~/.config/polybar/colors
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
