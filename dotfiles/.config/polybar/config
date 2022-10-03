@@ -1,13 +1,4 @@
-[colors]
-background = #e51d2021
-background-alt = #32302f
-foreground = #ebdbb2
-foreground-alt = #a89984
-primary = #d65d0e
-secondary = #fb4934
-alert = #cc241d
-aquaD = #427b58
-aquaL = #689d6a
+include-file = ./colors
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -20,10 +11,13 @@ radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.foreground-alt}
+foreground-0 = ${colors.foreground}
 
 line-size = 2
-line-color = #f00
+line-color = ${colors.orange}
+
+border-size = 0pt
 
 padding-left = 1
 padding-right = 1
@@ -83,7 +77,7 @@ label-layout =  %icon%%layout%
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.alert}
+label-indicator-background = ${colors.red}
 
 [module/filesystem]
 type = internal/fs
@@ -109,14 +103,15 @@ ws-icon-8 = IX;
 ws-icon-9 = X;嗢
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline= ${colors.orange}
 label-focused-padding = 2
 
 label-occupied = %name%
 label-occupied-padding = 2
 
 label-urgent = %name%!
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 label-empty = %name%
@@ -134,7 +129,7 @@ label-locked = " "
 label-marked = "車 "
 label-sticky = " "
 label-private = " "
-label-tiled-foreground = ${colors.primary}
+label-tiled-foreground = ${colors.orange}
 label-floating-foreground = #cc241a
 label-monocle-foreground = #cc241a
 format = <label-mode>
@@ -320,7 +315,7 @@ format-warn-underline = ${self.format-underline}
 label-foreground = ${colors.foreground-alt}
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.red}
 
 
 [module/powermenu]
@@ -360,7 +355,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
