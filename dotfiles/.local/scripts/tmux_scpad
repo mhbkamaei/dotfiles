@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+tmux attach-session -t scpad || tmux new-session -s scpad
+
