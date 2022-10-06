@@ -29,7 +29,10 @@ PATH=$PATH:~/.local/bin/
 antigen theme romkatv/powerlevel10k
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle rupa/z
 antigen apply
+
+source ~/.antigen/bundles/rupa/z/z.sh
 
 bindkey -v
 
