@@ -21,7 +21,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 source ~/.p10k.zsh
 export EDITOR=nvim
-
+PATH=$PATH:~/.local/bin/
 alias c='clear'
 alias cat='batcat'
 alias vi='nvim'
@@ -32,4 +32,4 @@ alias stowit="stow -vt ~ ."
 alias ai='sudo apt --no-install-recommends --no-install-suggests install'
 alias vimdiff='nvim -d'
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/dotfiles/.p10k.zsh ]] || source ~/.dotfiles/dotfiles/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
