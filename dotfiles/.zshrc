@@ -30,6 +30,7 @@ antigen use oh-my-zsh
 antigen bundle git-prompt
 antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-beginning-search-forward-end)
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
@@ -38,7 +39,7 @@ declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
 PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)'
 RPROMPT='%F{yellow}%*%f %F{blue}%?%f'
-bindkey -v
+#bindkey -v
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
