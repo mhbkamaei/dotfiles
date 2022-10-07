@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable oowerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ "$(xdotool search --class scpad)" == "$(xdotool getactivewindow)" ]]; then
@@ -6,7 +6,7 @@ if [[ "$(xdotool search --class scpad)" == "$(xdotool getactivewindow)" ]]; then
 fi
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 if [[ -f ~/.zsh_aliases ]]; then
@@ -14,7 +14,7 @@ if [[ -f ~/.zsh_aliases ]]; then
 fi
 
 if [[ -f ~/.p10k.zsh ]]; then
-    . ~/.p10k.zsh
+#    . ~/.p10k.zsh
 fi
 
 HISTFILE=~/.zsh_history
@@ -26,14 +26,16 @@ setopt HIST_FIND_NO_DUPS
 source /usr/share/zsh-antigen/antigen.zsh
 export EDITOR=nvim
 PATH=$PATH:~/.local/bin/
-antigen theme romkatv/powerlevel10k
+antigen use oh-my-zsh
+antigen bundle git-prompt
+antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle rupa/z
 antigen apply
 
-source ~/.antigen/bundles/rupa/z/z.sh
-
+source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
+PROMPT='%n@%m %~ $(git_super_status)'
+RPROMPT='%* %?'
 bindkey -v
 
 autoload -U history-search-end
