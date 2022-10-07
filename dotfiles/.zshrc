@@ -34,7 +34,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
-PROMPT='%~ -> $(git_super_status)'
+declare -a glyphs=(     )
+glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
+PROMPT='%~ $glyph $(git_super_status)'
 RPROMPT='%* %?'
 bindkey -v
 
