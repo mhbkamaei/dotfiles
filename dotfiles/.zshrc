@@ -36,8 +36,8 @@ antigen apply
 source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
 declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
-PROMPT='%~ $glyph $(git_super_status)'
-RPROMPT='%* %?'
+PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)'
+RPROMPT='%F{yellow}%*%f %F{blue}%?%f'
 bindkey -v
 
 autoload -U history-search-end
