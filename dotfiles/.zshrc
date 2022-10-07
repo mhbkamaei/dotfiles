@@ -34,7 +34,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
-PROMPT='%n@%m %~ $(git_super_status)'
+PROMPT='%~ -> $(git_super_status)'
 RPROMPT='%* %?'
 bindkey -v
 
