@@ -30,10 +30,25 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-be
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
-source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
+#source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
+
+# Default values for the appearance of the prompt.
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{green} %f"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%F{blue} כֿ %f"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}%{…%G%}"
+ZSH_THEME_GIT_PROMPT_STASHED="%{$fg_bold[blue]%}%{⚑%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
+
 declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
-PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)'
+PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status) '
 RPROMPT='%F{yellow}%*%f %F{green}%?%f'
 bindkey -v
 
