@@ -1,3 +1,4 @@
+alias plz='sudo !!'
 alias so='source ~/.zshrc'
 alias r='fc -s'
 alias please='sudo $(fc -ln -1)'

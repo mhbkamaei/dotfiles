@@ -27,7 +27,7 @@ module-margin-right = 1
 
 font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 
-modules-left = mode bspwm 
+modules-left = mode bspwm
 modules-center = date
 modules-right = backlight pulseaudio xkeyboard filesystem memory cpu temperature rofi
 
@@ -91,9 +91,9 @@ label-mounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 reverse-scroll = false
-ws-icon-0 = I;
+ws-icon-0 = I;
 ws-icon-1 = II;
-ws-icon-2 = III;
+ws-icon-2 = III;
 ws-icon-3 = IV;
 ws-icon-4 = V;
 ws-icon-5 = VI;
@@ -121,17 +121,19 @@ format = <label-state>
 
 [module/mode]
 type = internal/bspwm
-label-tiled= "  "
-label-monocle= " "
+label-tiled= " " 
+;label-tiled= "﬿ " 
+;   ﬿        綠 ﱾ 聯 廬 擄         "
+label-monocle=""
 label-fullscreen= " "
-label-floating= "﯑ "
+label-floating= " " 
 label-locked = " "
-label-marked = "車 "
-label-sticky = " "
-label-private = " "
-label-tiled-foreground = ${colors.orange}
-label-floating-foreground = #cc241a
-label-monocle-foreground = #cc241a
+label-marked = " "
+label-sticky = " "
+label-private = "廬 "
+;label-tiled-foreground = ${colors.orange}
+;label-floating-foreground = #cc241a
+;label-foreground = #cc241a
 format = <label-mode>
 
 [module/mpd]
