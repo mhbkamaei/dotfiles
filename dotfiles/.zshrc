@@ -48,7 +48,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
 
 declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
-PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status) '
+PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)  '
 RPROMPT='%F{yellow}%*%f %F{green}%?%f'
 #bindkey -v
 
