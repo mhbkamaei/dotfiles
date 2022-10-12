@@ -18,7 +18,7 @@ from ranger.gui.color import (
 )
 
 
-class Dracula(ColorScheme):
+class Gruvbox(ColorScheme):
     progress_bar_color = 13
 
     def verify_browser(self, context, fg, bg, attr):
