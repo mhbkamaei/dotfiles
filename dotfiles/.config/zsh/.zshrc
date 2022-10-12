@@ -2,7 +2,7 @@
 #
 #
 
-HISTFILE=~/.zsh_history
+HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
@@ -59,6 +59,7 @@ if [[ "$(xdotool search --class scpad)" == "$(xdotool getactivewindow)" ]]; then
     neofetch
 fi
 
-if [[ -f ~/.zsh_aliases ]]; then
-    . ~/.zsh_aliases
+if [[ -f $ZDOTDIR/.aliases ]]; then
+    . $ZDOTDIR/.aliases
 fi
+
