@@ -28,7 +28,7 @@ antigen apply
 # Default values for the appearance of the prompt.
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{green} %f"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_SEPARATOR="%F{blue} כֿ %f"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%F{blue} %f"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{%G%}"
 ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
