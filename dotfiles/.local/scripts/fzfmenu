@@ -1,0 +1,22 @@
+#!/bin/bash
+
+selected=$(printf "cansel\nshutdown\nreboot\n"|fzf --layout=reverse)
+
+case $selected in
+    cansel)
+        ;;
+    shutdown)
+        selected=$(printf "no\nyes"|fzf --layout=reverse)
+        if [[ "$selected" == "yes" ]]
+        then
+            exec systemctl poweroff
+        fi
+        ;;
+    reboot)
+        selected=$(printf "no\nyes"|fzf --layout=reverse)
+        if [[ "$selected" == "yes" ]]
+        then
+            exec systemctl reboot
+        fi
+        ;;
+esac
