@@ -36,7 +36,7 @@ ctrl + alt + Delete
 	kitty --class fzfmenu $HOME/.local/scripts/fzfmenu
 # config files
 super + c
-    kitty --class fzfconfs $HOME/.local/scripts/confs
+    kitty --class fzfconfigs $HOME/.local/scripts/fzfconfigs
 
 # close and kill
 super + {_,shift + }w
