@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/zsh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
@@ -28,6 +28,9 @@ bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a scpad state=floating rectangle=960x540+480+270
+bspc rule -a fzfmenu   state=floating rectangle=200x220+860+450
+bspc rule -a fzfconfs  state=floating rectangle=400x500+760+290
+
 
 bspc config normal_border_color "#282828"
 bspc config focused_border_color "#fe8019"

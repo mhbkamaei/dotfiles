@@ -14,7 +14,7 @@ source /usr/share/zsh-antigen/antigen.zsh
 export EDITOR=nvim
 export TERMINAL=kitty
 
-PATH=$PATH:$HOME/.local/bin/:$HOME/.local/scripts/
+PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 antigen use oh-my-zsh
 antigen bundle git-prompt
 antigen bundle z

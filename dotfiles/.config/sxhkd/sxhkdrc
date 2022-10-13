@@ -31,6 +31,12 @@ super + Escape
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r};dunstify 'bspwm' 'rebooted'
+# powermeny
+ctrl + alt + Delete
+	kitty --class fzfmenu $HOME/.local/scripts/fzfmenu
+# config files
+super + c
+    kitty --class fzfconfs $HOME/.local/scripts/confs
 
 # close and kill
 super + {_,shift + }w

@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
-selected=$(printf " cancel\n襤shutdown\n reboot\n"|fzf --layout=reverse --border)
+source $HOME/.zshenv
+
+selected=$(printf " cancel\n襤shutdown\n reboot\n logout"|fzf --layout=reverse --border)
 
 case $selected in
     " cancel")
@@ -17,6 +19,13 @@ case $selected in
         if [[ "$selected" == " yes" ]]
         then
             exec systemctl reboot
+        fi
+        ;;
+    " logout")
+        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        if [[ "$selected" == " yes" ]]
+        then
+            loginctl terminate-session ${XDG_SESSION_ID-} 
         fi
         ;;
 esac
