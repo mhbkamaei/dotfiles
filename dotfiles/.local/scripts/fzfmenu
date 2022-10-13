@@ -1,20 +1,20 @@
 #!/bin/bash
 
-selected=$(printf "cansel\nshutdown\nreboot\n"|fzf --layout=reverse)
+selected=$(printf " cancel\n襤shutdown\n reboot\n"|fzf --layout=reverse --border)
 
 case $selected in
-    cansel)
+    " cancel")
         ;;
-    shutdown)
-        selected=$(printf "no\nyes"|fzf --layout=reverse)
-        if [[ "$selected" == "yes" ]]
+    "襤shutdown")
+        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        if [[ "$selected" == " yes" ]]
         then
             exec systemctl poweroff
         fi
         ;;
-    reboot)
-        selected=$(printf "no\nyes"|fzf --layout=reverse)
-        if [[ "$selected" == "yes" ]]
+    " reboot")
+        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        if [[ "$selected" == " yes" ]]
         then
             exec systemctl reboot
         fi
