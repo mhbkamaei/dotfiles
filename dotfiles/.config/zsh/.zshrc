@@ -66,3 +66,12 @@ if [[ -f $ZDOTDIR/.aliases ]]; then
     . $ZDOTDIR/.aliases
 fi
 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+#export FZF_CTRL_T_COMMAND=''
+#export FZF_CTRL_T_OPTS=
+#export FZF_CTRL_R_COMMAND=
+#export FZF_CTRL_R_OPTS=
+#export FZF_ALT_C_COMMAND=
+#export FZF_ALT_C_OPTS=
+export FZF_DEFAULT_COMMAND='ls'
+export FZF_DEFAULT_OPTS="-m --preview 'batcat {}'"
