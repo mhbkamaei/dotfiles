@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+mkdir -p $XDG_DATA_HOME/marks
+
+sqlite3 $XDG_DATA_HOME/marks/marks.sqlite << 'INIT'
+CREATE TABLE marks (
+    dir VARCHAR(200) UNIQUE,
+    weight INTEGER
+);
+
+CREATE INDEX _dir ON marks (dir);
+INIT

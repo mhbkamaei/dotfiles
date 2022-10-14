@@ -1,7 +1,10 @@
 #
 #
 #
-
+autoload f
+autoload ccleanup
+autoload update_marks
+chpwd_functions+=(update_marks)
 HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
 SAVEHIST=10000

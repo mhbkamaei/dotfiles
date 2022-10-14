@@ -50,7 +50,7 @@ cursor-scroll = ns-resize
 type = custom/text
 content =
 ;click-left = rofi -show p -modi p:~/.config/rofi/scripts/powermenu
-click-left = kitty --class fzf $HOME/.local/scripts/fzfmenu
+click-left = kitty --class fzfmenu $HOME/.local/scripts/fzfmenu
 content-foreground = ${colors.foreground-alt}
 [module/backlight]
 type = internal/backlight
