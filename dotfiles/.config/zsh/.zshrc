@@ -1,10 +1,6 @@
 #
 #
 #
-autoload f
-autoload ccleanup
-autoload update_marks
-chpwd_functions+=(update_marks)
 HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -20,13 +16,11 @@ export TERMINAL=kitty
 PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 antigen use oh-my-zsh
 antigen bundle git-prompt
-antigen bundle z
+# antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-beginning-search-forward-end)
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
-
-#source ~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z/z.sh
 
 # Default values for the appearance of the prompt.
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{green} %f"
