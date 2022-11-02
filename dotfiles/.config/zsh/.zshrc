@@ -10,13 +10,11 @@ setopt HIST_FIND_NO_DUPS
 
 source /usr/share/zsh-antigen/antigen.zsh
 
-export EDITOR=nvim
-export TERMINAL=kitty
+eval "$(zoxide init zsh)"
 
 PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 antigen use oh-my-zsh
 antigen bundle git-prompt
-# antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-beginning-search-forward-end)
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -24,7 +22,7 @@ antigen apply
 
 # Default values for the appearance of the prompt.
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{green} %f"
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=" "
 ZSH_THEME_GIT_PROMPT_SEPARATOR="%F{blue} %f"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{%G%}"
@@ -38,20 +36,13 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
 
 declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
-PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)  '
-
-rprmpt(){
-    if [[ $? -eq 0 ]]
-    then
-        RPROMPT='%F{yellow}%*%f %F{green}﫟 %f'
-        PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph %f$(git_super_status)%F{cyan}%f'
-    else
-        RPROMPT='%F{yellow}%*%f %F{red} %f%'
-        PROMPT='%F{cyan}%~%f %F{#d65d0e}$glyph %f$(git_super_status)%F{red}%f'
-    fi
+prmpt(){
+    PROMPT="%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)%(?.%F{green}.%F{red}) %f"
+    RPROMPT=""
 }
 
-precmd_functions+=(rprmpt)
+precmd_functions+=(prmpt)
+
 #bindkey -v
 
 autoload -U edit-command-line

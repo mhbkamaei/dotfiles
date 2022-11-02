@@ -4,6 +4,9 @@ XDG_DATA_HOME="$HOME/.local/share"
 
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export EDITOR=nvim
+export TERMINAL=kitty
+
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=dark
     --color=fg:#d79921,bg:#000000,hl:#fb4936
