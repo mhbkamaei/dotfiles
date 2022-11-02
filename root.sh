@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools="growisofs"
+tools="growisofs zoxide"
 utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2 fzf"
 zsh="zsh zsh-antigen"
 xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter"
