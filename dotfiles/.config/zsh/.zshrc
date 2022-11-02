@@ -1,6 +1,7 @@
 #
 #
 #
+eval "$(zoxide init zsh)"
 HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
 SAVEHIST=10000
