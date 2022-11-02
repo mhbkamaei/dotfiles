@@ -2,27 +2,28 @@
 
 source $HOME/.zshenv
 
-selected=$(printf " cancel\n襤shutdown\n reboot\n logout"|fzf --layout=reverse --border)
+export FZF_DEFAULT_OPTS=$OPTS_COLOR
+selected=$(printf " cancel\n襤shutdown\n reboot\n logout"|fzf --layout=reverse)
 
 case $selected in
     " cancel")
         ;;
     "襤shutdown")
-        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        selected=$(printf " no\n yes"|fzf --layout=reverse)
         if [[ "$selected" == " yes" ]]
         then
             exec systemctl poweroff
         fi
         ;;
     " reboot")
-        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        selected=$(printf " no\n yes"|fzf --layout=reverse)
         if [[ "$selected" == " yes" ]]
         then
             exec systemctl reboot
         fi
         ;;
     " logout")
-        selected=$(printf " no\n yes"|fzf --layout=reverse --border)
+        selected=$(printf " no\n yes"|fzf --layout=reverse)
         if [[ "$selected" == " yes" ]]
         then
             loginctl terminate-session ${XDG_SESSION_ID-} 

@@ -1,4 +1,3 @@
- 
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -18,7 +17,8 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
-
+keymap("n", "<leader>ss", ":split<CR>", opts)
+keymap("n", "<leader>sv", ":vsplit<CR>", opts)
 -- Normal --
 keymap("n", "C-J", "i<CR><ESC>", opts)
 -- Better window navigation
