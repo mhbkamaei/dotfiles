@@ -6,6 +6,7 @@ ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 export EDITOR=nvim
 export TERMINAL=kitty
+export BAT_THEME=gruvbox-dark
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=dark

@@ -2,7 +2,7 @@
 
 source $HOME/.zshenv
 
-selected=$(printf "zsh\nbspwm\nsxhkd\npolybar\nkitty\nnvim\npicom\nranger\naliases\nhistory\nconfigs" | fzf --layout=reverse --border)
+selected=$(printf "zsh\nbspwm\nsxhkd\npolybar\nkitty\nnvim\npicom\nranger\naliases\nhistory\nconfigs" | fzf --layout=reverse)
 
 case $selected in
     zsh)

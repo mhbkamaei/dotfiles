@@ -1,10 +1,10 @@
 #!/bin/bash
 
-tools="growisofs zoxide"
-utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2 fzf"
+tools="growisofs zoxide fzf"
+utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2"
 zsh="zsh zsh-antigen"
 xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter"
-wm="sxhkd picom feh bspwm rofi dunst polybar"
+wm="sxhkd picom feh bspwm dunst polybar"
 
 sudo apt update
 sudo apt upgrade -y
