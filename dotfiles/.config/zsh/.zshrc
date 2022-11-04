@@ -38,7 +38,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
 declare -a glyphs=(     )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
 prmpt(){
-    PROMPT="%F{cyan}%~%f %F{#d65d0e}$glyph%f $(git_super_status)%(?.%F{green}.%F{red}) %f"
+    PROMPT="%F{yellow}%~%f %F{#d65d0e}$glyph%f $(git_super_status)%(?.%F{green}.%F{red}) %f"
     RPROMPT=""
 }
 
@@ -64,12 +64,14 @@ if [[ -f $ZDOTDIR/.aliases ]]; then
     . $ZDOTDIR/.aliases
 fi
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
 #export FZF_CTRL_T_COMMAND=''
 #export FZF_CTRL_T_OPTS=
 #export FZF_CTRL_R_COMMAND=
 #export FZF_CTRL_R_OPTS=
 #export FZF_ALT_C_COMMAND=
 #export FZF_ALT_C_OPTS=
-export FZF_DEFAULT_COMMAND='ls'
-export FZF_DEFAULT_OPTS="-m --preview 'batcat {}'"
+#export FZF_DEFAULT_COMMAND='ls'
+#export FZF_DEFAULT_OPTS="-m --preview 'batcat {}'"
+
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
