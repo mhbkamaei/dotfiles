@@ -63,6 +63,9 @@ return require('packer').startup(function()
         'numToStr/Comment.nvim'
     }
     use {
+        'numToStr/FTerm.nvim'
+    }
+    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
