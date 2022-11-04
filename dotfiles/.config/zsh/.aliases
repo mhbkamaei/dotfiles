@@ -1,3 +1,4 @@
+alias fd='fdfind'
 alias tn='tmux new -s $( pwd | sed "s/.*\///g")'
 alias plz='sudo $(fc -ln -1)'
 alias so='source ~/.zshrc'
