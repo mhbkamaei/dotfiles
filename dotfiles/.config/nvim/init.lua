@@ -1,6 +1,6 @@
 require "user.options"
 require "user.keymaps"
-require "user.plugins"
+require "user.plugins_to_install"
 require "user.cmp"
 require "user.lspconfig"
 require "user.telescope"

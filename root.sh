@@ -15,4 +15,4 @@ sudo apt install $utills --no-install-recommends --no-install-suggests -y
 sudo apt install $wm     --no-install-recommends --no-install-suggests -y
 
 chsh hbb -s /bin/zsh
-
+ln -s $(which fdfind) $HOME/.local/bin/fd
