@@ -9,6 +9,7 @@ export TERMINAL=kitty
 export BAT_THEME=gruvbox-dark
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --border
     --color=dark
     --color=fg:#d79921,bg:#000000,hl:#fb4936
     --color=fg+:#427b58,bg+:#3c3836,hl+:#fb4936
