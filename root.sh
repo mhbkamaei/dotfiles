@@ -20,5 +20,6 @@ sudo apt install $wm            --no-install-recommends --no-install-suggests -y
 
 mkdir $HOME/.config $HOME/.local/bin -p
 ln -s $(which fdfind) $HOME/.local/bin/fd
+ln -s $(which batcat) $HOME/.local/bin/bat
 
 chsh hbb -s /bin/zsh
