@@ -65,13 +65,13 @@ if [[ -f $ZDOTDIR/.aliases ]]; then
 fi
 
 export FZF_CTRL_T_COMMAND='fd --type f --hidden'
-export FZF_CTRL_T_OPTS='--border'
+#export FZF_CTRL_T_OPTS='--border'
 #export FZF_CTRL_R_COMMAND=
 #export FZF_CTRL_R_OPTS=
 #export FZF_ALT_C_COMMAND=
 #export FZF_ALT_C_OPTS=
 export FZF_DEFAULT_COMMAND='fd --type f --hidden'
-export FZF_DEFAULT_OPTS="--border"
+#export FZF_DEFAULT_OPTS="--border"
 
 source /usr/share/doc/fzf/examples/completion.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
