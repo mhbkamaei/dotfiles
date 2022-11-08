@@ -2,6 +2,7 @@
 
 source $HOME/.zshenv
 
+export FZF_DEFAULT_OPTS=$OPTS_COLOR
 selected=$(printf "zsh\nbspwm\nsxhkd\npolybar\nkitty\nnvim\npicom\nranger\naliases\nhistory\nconfigs" | fzf --layout=reverse)
 
 case $selected in
