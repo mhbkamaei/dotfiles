@@ -14,18 +14,20 @@ OPTS_COLOR='
     --border
     --color=dark --color=fg:#d79921,bg:#000000,hl:#fb4936
     --color=fg+:#427b58,bg+:#3c3836,hl+:#fb4936
-    --color=info:#458588,prompt:#cc241d,pointer:#b8bb26
+    --color=info:#458588,prompt:#458588,pointer:#b8bb26
     --color=marker:#98971a,spinner:#458588,header:#b16286,border:#427b58
     '
+FZF_DIR=' --prompt=" " --pointer="" --marker="裂"'
+FZF_PATH=' --prompt=" " --pointer="" --marker="裂"'
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden'
-export FZF_DEFAULT_OPTS=$OPTS_COLOR$OPTS_BAT
+export FZF_DEFAULT_OPTS=$OPTS_COLOR$OPTS_BAT$FZF_PATH
 
 export FZF_CTRL_T_COMMAND='fd --type f --hidden'
-export FZF_CTRL_T_OPTS=$OPTS_COLOR$OPTS_BAT
+export FZF_CTRL_T_OPTS=$OPTS_COLOR$OPTS_BAT$FZF_PATH
 
 #export FZF_CTRL_R_COMMAND=''
 #export FZF_CTRL_R_OPTS=''
 
 export FZF_ALT_C_COMMAND='fd --type d --hidden'
-export FZF_ALT_C_OPTS=$OPTS_COLOR$OPTS_TREE
+export FZF_ALT_C_OPTS=$OPTS_COLOR$OPTS_TREE$FZF_DIR
