@@ -1,3 +1,7 @@
 qmk/
 venv/
 .cache/
+.mozilla/
+bundles/
+lib/
+.git/

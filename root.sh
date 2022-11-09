@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tools="growisofs tmux curl fzf fd-find firefox-esr"
-tree-sitter="gcc g++ libstdc++-12-dev npm"
+tree_sitter="gcc g++ libstdc++-12-dev npm"
 utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2"
 zsh="zsh zsh-antigen"
 xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter x11-xserver-utiles"

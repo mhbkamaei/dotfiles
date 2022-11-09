@@ -1,11 +1,10 @@
 #
 #
 #
-PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 eval "$(zoxide init zsh)"
-HISTFILE=$ZDOTDIR/.history
-HISTSIZE=10000
-SAVEHIST=10000
+#HISTFILE=$ZDOTDIR/.history
+#HISTSIZE=10000
+#SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
@@ -44,9 +43,9 @@ precmd_functions+=(prmpt)
 
 #bindkey -v
 
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '^e' edit-command-line
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey '^e' edit-command-line
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end

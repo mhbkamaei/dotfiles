@@ -2,7 +2,7 @@
 
 source $HOME/.zshenv
 
-export FZF_DEFAULT_OPTS=$OPTS_COLOR
+export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF' --prompt=" "'
 selected=$(printf " cancel\n襤shutdown\n reboot\n logout"|fzf --layout=reverse)
 
 case $selected in
