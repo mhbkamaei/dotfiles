@@ -12,6 +12,7 @@ export PATH=$PATH:$HOME/.local/scripts
 export EDITOR=nvim
 export TERMINAL=kitty
 export BAT_THEME=gruvbox-dark
+export MANPAGER="zsh -c 'col -bx | bat -l man -p'"
 
 OPTS_MENU=' --border=none --header-first --padding=1'
 OPTS_BAT=' --preview "bat --style=numbers --color=always --line-range :40 {}"'
