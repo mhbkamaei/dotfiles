@@ -50,7 +50,8 @@ return require('packer').startup(function()
         'kevinhwang91/rnvimr'
     }
     use {
-        'ellisonleao/gruvbox.nvim'
+        'ellisonleao/gruvbox.nvim',
+        commit='cb7a8a867cfaa7f0e8ded57eb931da88635e7007'
     }
     use {
         'norcalli/nvim-colorizer.lua'

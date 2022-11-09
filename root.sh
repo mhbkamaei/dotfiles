@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools="growisofs tmux zoxide fzf fd-find firefox-esr"
+tools="growisofs tmux curl fzf fd-find firefox-esr"
 tree-sitter="gcc g++ libstdc++-12-dev npm"
 utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2"
 zsh="zsh zsh-antigen"
@@ -21,5 +21,7 @@ sudo apt install $wm            --no-install-recommends --no-install-suggests -y
 mkdir $HOME/.config $HOME/.local/bin -p
 ln -s $(which fdfind) $HOME/.local/bin/fd
 ln -s $(which batcat) $HOME/.local/bin/bat
+
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 chsh hbb -s /bin/zsh

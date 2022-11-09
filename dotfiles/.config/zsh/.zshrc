@@ -1,6 +1,7 @@
 #
 #
 #
+PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 eval "$(zoxide init zsh)"
 HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
@@ -11,9 +12,6 @@ setopt HIST_FIND_NO_DUPS
 
 source /usr/share/zsh-antigen/antigen.zsh
 
-eval "$(zoxide init zsh)"
-
-PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
 antigen use oh-my-zsh
 antigen bundle git-prompt
 antigen bundle zsh-users/zsh-autosuggestions
