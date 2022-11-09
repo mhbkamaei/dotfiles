@@ -13,6 +13,7 @@ export EDITOR=nvim
 export TERMINAL=kitty
 export BAT_THEME=gruvbox-dark
 
+OPTS_MENU=' --border=none --header-first --padding=1'
 OPTS_BAT=' --preview "bat --style=numbers --color=always --line-range :40 {}"'
 OPTS_TREE=' --preview "tree -C -L 2 {}"'
 OPTS_ALL='
