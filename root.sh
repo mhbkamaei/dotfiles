@@ -1,10 +1,10 @@
 #!/bin/bash
 
-tools="growisofs zoxide fzf fd-find firefox-esr"
+tools="growisofs tmux zoxide fzf fd-find firefox-esr"
 tree-sitter="gcc g++ libstdc++-12-dev npm"
 utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2"
 zsh="zsh zsh-antigen"
-xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter"
+xorg="xserver-xorg-core xserver-xorg-input-libinput xinit xclip lightdm slick-greeter x11-xserver-utiles"
 wm="sxhkd picom feh bspwm dunst polybar"
 
 sudo apt update
