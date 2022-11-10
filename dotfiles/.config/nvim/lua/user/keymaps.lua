@@ -17,6 +17,14 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, opts)
+vim.keymap.set("n", "<leader>fb", builtin.buffers, opts)
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
+
 keymap("n", "<leader>ss", ":split<CR>", opts)
 keymap("n", "<leader>sv", ":vsplit<CR>", opts)
 -- Normal --
