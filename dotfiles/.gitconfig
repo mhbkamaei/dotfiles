@@ -1,3 +1,33 @@
 [user]
 	email = mh.b.kamaei@gmail.com
 	name = mhbkamaei
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[delta]
+	file-decoration-style = black ul ol
+	file-style = gray
+	hunk-header-decoration-style = gray box
+	hunk-header-line-number-style = black
+	line-numbers = true
+	line-numbers-left-format = {nm:>3}│
+	line-numbers-left-style = gray
+	line-numbers-minus-style = red
+	line-numbers-plus-style = green
+	line-numbers-right-format = {np:>3}│
+	line-numbers-right-style = gray
+	line-numbers-zero-style = gray
+	minus-emph-style = red bold
+	minus-empty-line-marker-style = omit
+	minus-style = red
+	navigate = false
+	plus-emph-style = green bold
+	plus-empty-line-marker-style = omit
+	plus-style = green
+	side-by-side = true
+	true-color = auto
+    zero-style = black
+[core]
+	pager = delta --line-numbers --dark
