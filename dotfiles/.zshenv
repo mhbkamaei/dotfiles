@@ -21,7 +21,7 @@ OPTS_TREE='--preview-window=down --preview "exa -a --icons --group-directories-f
 OPTS_ALL='
 --header-first --border=sharp --preview-window border-sharp --reverse
 --color=dark --color=fg:#a89984,bg:#000000,hl:#83a598:bold
---color=fg+:#bdae93:bold,bg+:#32302f,hl+:#458588
+--color=fg+:#d65d0e:bold,bg+:#32302f,hl+:#458588
 --color=info:#98971a,prompt:#d65d0e,pointer:#b16286
 --color=marker:#cc241d,spinner:#b16286,header:#b16286,border:#504945
 '
