@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+source $HOME/.zshenv
+
+export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF$OPTS_MENU' --prompt=" " --header="URLS"'
+
+urls="
+https://songsara.net
+https://f2m.space
+https://monkeytype.com
+"
+
+selected=$(printf $urls | fzf --layout=reverse)
+
+xdg-open $selected

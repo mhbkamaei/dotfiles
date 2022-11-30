@@ -28,6 +28,7 @@ bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a scpad state=floating rectangle=960x540+480+270
+bspc rule -a fzfurls sticky=on state=floating rectangle=400x450+760+290
 bspc rule -a fzfmenu sticky=on state=floating rectangle=200x220+860+450
 bspc rule -a fzfconfigs sticky=on state=floating rectangle=400x450+760+290
 

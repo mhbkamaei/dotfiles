@@ -23,11 +23,14 @@ super + r
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd; dunstify 'sxhkd' 'rebooted'
-# powermeny
-ctrl + alt + Delete
+# fzf using leaderkey like behavior
+ctrl + f ; u
+    kitty --class fzfurls $HOME/.local/scripts/fzfurls
+
+ctrl + f ; m
 	kitty --class fzfmenu $HOME/.local/scripts/fzfmenu
-# config files
-super + c
+
+ctrl + f ; c
     kitty --class fzfconfigs $HOME/.local/scripts/fzfconfigs
 
 #
