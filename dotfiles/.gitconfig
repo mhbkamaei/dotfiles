@@ -2,7 +2,7 @@
 	email = mh.b.kamaei@gmail.com
 	name = mhbkamaei
 [pager]
-	diff = delta
+	; diff = delta
 	log = delta
 	reflog = delta
 	show = delta

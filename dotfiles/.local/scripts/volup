@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+sink=$(pactl list sinks | awk 'NR==1{print substr($2,2);}')
+
+pactl set-sink-volume "$sink" +10%

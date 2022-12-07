@@ -12,7 +12,7 @@ super + z
 	feh --recursive --bg-fill --randomize ~/.config/wallpapers/
 # open browser
 super + f
-	firefox
+	firefox --class=Firefox-esr
 # video player
 super + v
 	vlc
@@ -24,13 +24,13 @@ super + r
 super + Escape
 	pkill -USR1 -x sxhkd; dunstify 'sxhkd' 'rebooted'
 # fzf using leaderkey like behavior
-ctrl + f ; u
-    kitty --class fzfurls $HOME/.local/scripts/fzfurls
+ctrl + z ; u
+    kitty --class fzfurls fzfurls
 
-ctrl + f ; m
-	kitty --class fzfmenu $HOME/.local/scripts/fzfmenu
+ctrl + z ; m
+	kitty --class fzfmenu fzfmenu
 
-ctrl + f ; c
+ctrl + z ; c
     kitty --class fzfconfigs $HOME/.local/scripts/fzfconfigs
 
 #
@@ -153,13 +153,15 @@ super + {Left,Down,Up,Right}
 #
 
 XF86AudioMute
-    pactl set-sink-mute 0 toggle
+    pactl set-sink-mute 80 toggle
 
 XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +10%
+    volup
+    # pactl set-sink-volume 80 +10%
 
 XF86AudioLowerVolume
-    pactl set-sink-volume 0 -10%
+    $HOME/.local/scripts/voldown
+    # pactl set-sink-volume 80 -10%
 
 #
 # brightness

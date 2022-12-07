@@ -1,15 +1,14 @@
 #!/bin/zsh
 
-source $HOME/.zshenv
-
 export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF$OPTS_MENU' --prompt=" " --header="URLS"'
 
-urls="
-https://songsara.net
-https://f2m.space
-https://monkeytype.com
-"
+urls=$(cat $HOME/bookmarks)
 
 selected=$(printf $urls | fzf --layout=reverse)
-
-xdg-open $selected
+if [ -z $selected ]; then
+    exit 0
+fi
+WID="$(xdo id)"
+xdo hide
+firefox --class=firefox-fzf --new-window $selected
+xdo show "$WID"

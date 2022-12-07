@@ -20,9 +20,11 @@ bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^9' state=floating follow=on
+bspc rule -a Gimp desktop='^9' follow=on
 bspc rule -a vlc desktop='^10' follow=on
 bspc rule -a Firefox-esr desktop='^2' follow=on
+bspc rule -a firefox-fzf desktop='^9' follow=on
+bspc rule -a MEGAsync desktop='^3' follow=on
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
