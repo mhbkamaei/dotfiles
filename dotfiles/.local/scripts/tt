@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+Z_RESULT=$(zoxide query $1)
+FOLDER="$(basename $Z_RESULT)"
+SESSION=$(tmux list-session | grep $FOLDER | awk '{print $1}')
+SESSION=${SESSION//:/}
+
+if [ -z $Z_RESULT ]
+then
+    exit 1
+fi
+
+if [ -z $TMUX ]
+then
+    # echo 'current terminal is not a tmux session'
+    if [ -z $SESSION ]
+    then
+        # echo "session $FOLDER does not exist"
+        cd $Z_RESULT
+        tmux new-session -s $FOLDER
+    else
+        # echo "session $FOLDER already exists"
+        tmux attach -t $SESSION
+    fi
+else
+    # echo 'current terminal is a tmux session'
+    if [ -z $SESSION ]
+    then
+        # echo "session $FOLDER does NOT exist"
+        cd $Z_RESULT
+        tmux new-session -d -s $FOLDER
+        tmux switch-client -t $FOLDER
+    else
+        # echo "session $FOLDER already exists"
+        tmux switch-client -t $SESSION
+    fi
+fi

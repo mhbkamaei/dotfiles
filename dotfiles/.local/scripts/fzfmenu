@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-source $HOME/.zshenv
-
 export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF$OPTS_MENU' --prompt=" " --header="POWER MENU"'
 selected=$(printf " cancel\n襤shutdown\n reboot\n logout"|fzf --layout=reverse)
 

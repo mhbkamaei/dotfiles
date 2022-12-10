@@ -10,5 +10,5 @@ if [ -z $selected ]; then
 fi
 WID="$(xdo id)"
 xdo hide
-firefox --class=firefox-fzf --new-window $selected
+firefox --new-instance -P default --class=firefox-fzf --new-window $selected
 xdo show "$WID"

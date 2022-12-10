@@ -20,21 +20,23 @@ bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^9' follow=on
+bspc rule -a kitty desktop='^1' follow=on
 bspc rule -a vlc desktop='^10' follow=on
 bspc rule -a Firefox-esr desktop='^2' follow=on
+bspc rule -a fzfconfigs desktop='^5' follow=on
+bspc rule -a discord desktop='^6' follow=on
+bspc rule -a Slack desktop='^7' follow=on
 bspc rule -a firefox-fzf desktop='^9' follow=on
-bspc rule -a MEGAsync desktop='^3' follow=on
+bspc rule -a MEGAcloud desktop='^3' follow=on
+bspc rule -a MEGAsync desktop='^3' follow=on state=floating center=on
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a scpad state=floating rectangle=960x540+480+270
-bspc rule -a fzfurls sticky=on state=floating rectangle=400x450+760+290
-bspc rule -a fzfmenu sticky=on state=floating rectangle=200x220+860+450
-bspc rule -a fzfconfigs sticky=on state=floating rectangle=400x450+760+290
-
+bspc rule -a fzfurls state=floating rectangle=400x450+760+290
+bspc rule -a fzfmenu state=floating rectangle=200x220+860+450
+bspc rule -a fzfconfigs desktop='^5' state=floating rectangle=400x450+760+290
 
 bspc config normal_border_color "#282828"
 bspc config focused_border_color "#fe8019"
-

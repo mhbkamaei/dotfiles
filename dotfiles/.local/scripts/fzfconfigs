@@ -1,9 +1,7 @@
 #!/bin/zsh
 
-source $HOME/.zshenv
-
 export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF$OPTS_MENU' --prompt="漣 " --header="CONFIGURATIONS"'
-selected=$(printf "zsh\nbspwm\nsxhkd\npolybar\nkitty\nnvim\npicom\nranger\naliases\nhistory\nconfigs" | fzf --layout=reverse)
+selected=$(printf "zsh\nbspwm\nsxhkd\npolybar\nkitty\nnvim\npicom\nranger\naliases\nhistory\ntmux\nconfigs" | fzf --layout=reverse)
 
 case $selected in
     zsh)
@@ -55,6 +53,11 @@ case $selected in
         bspc node focused.floating -t tiled
         sleep 0.2
         vi $XDG_CONFIG_HOME/zsh/.history
+    ;;
+    tmux)
+        bspc node focused.floating -t tiled
+        sleep 0.2
+        vi $HOME/.tmux.conf
     ;;
     configs)
         bspc node focused.floating -t tiled
