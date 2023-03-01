@@ -29,6 +29,7 @@ bspc rule -a Slack desktop='^7' follow=on
 bspc rule -a firefox-fzf desktop='^9' follow=on
 bspc rule -a MEGAcloud desktop='^3' follow=on
 bspc rule -a MEGAsync desktop='^3' follow=on state=floating center=on
+bspc rule -a Code desktop='^4' follow=on
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Dunst state=floating
 bspc rule -a Kupfer.py focus=on
