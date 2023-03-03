@@ -16,6 +16,14 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    \     del  end  pgdn
   esc @_a  @_s  @_d  @_f   g    h    @_j  @_k  @_l  @_;    '    ret
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft                   up
+  lctl lmet lalt           @_spc          ralt rmet cmp rctl              left  down  right 
+)
+(deflayer arrowkeys
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        prnt slck
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \     del  end  pgdn
+  esc @_a  @_s  @_d  @_f   g    left    down up right  @_;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft                   up
   lctl lmet lalt           spc            ralt rmet cmp rctl              left  down  right 
 )
 (defalias
@@ -27,4 +35,5 @@
     _k (tap-hold-next-release 200 k rctl)
     _l (tap-hold-next-release 200 l ralt)
     _; (tap-hold-next-release 200 ; rmet)
+    _spc (tap-hold-next-release 200 spc (layer-toggle arrowkeys))
 )
