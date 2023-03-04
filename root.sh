@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools="growisofs tmux curl fzf fd-find firefox-esr"
+tools="ripgrep tree growisofs tmux curl fzf fd-find firefox-esr"
 tree_sitter="gcc g++ libstdc++-12-dev npm"
 utills="unzip neovim kitty stow exa ranger xdotool brightnessctl pip uget aria2"
 zsh="zsh zsh-antigen"
