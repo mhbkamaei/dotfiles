@@ -32,7 +32,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}%{…%G%}"
 ZSH_THEME_GIT_PROMPT_STASHED="%{$fg_bold[blue]%}%{⚑%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
 
-declare -a glyphs=(     )
+declare -a glyphs=(       󰨞  󰱯 󰇷 󱕼 󰱲    󱓞 󰩃 󰄛   󰆚    󱗞   󰡶           󰇊 󰇋 󰇌 󰇍 󰇎 󰇎 󰟆 󰛤 󰟈 󰼁 󱜿 󱠦 󰌽 󰟟  󰏒 󰨈 󰐤  󰳆 󰚌 󰔙 󰙸  󱎶 󰻕 )
 glyph=${glyphs[ $RANDOM % ${#glyphs[@]} + 1 ]}
 prmpt(){
     PROMPT="%F{yellow}%~%f %F{#d65d0e}$glyph%f $(git_super_status)%(?.%F{green}.%F{red}) %f"
@@ -63,4 +63,4 @@ fi
 
 source /usr/share/doc/fzf/examples/completion.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
-source ~/fzf.zsh
+# source ~/fzf.zsh

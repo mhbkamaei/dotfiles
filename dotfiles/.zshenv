@@ -9,6 +9,8 @@ SAVEHIST=10000
 
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/scripts
+export PATH=$PATH:/usr/NX/share/applnk/client/xdg
+export PATH=$PATH:/usr/NX/share/applnk/server/xdg
 export EDITOR=nvim
 export TERMINAL=kitty
 export BAT_THEME=gruvbox-dark
@@ -37,10 +39,10 @@ export FZF_DEFAULT_OPTS=$OPTS_ALL$FZF_DEF
 export FZF_CTRL_T_COMMAND='fd --type f --hidden'
 export FZF_CTRL_T_OPTS=$OPTS_ALL$FZF_FIL$OPTS_BAT
 
-#export FZF_CTRL_R_COMMAND='' Does not exist.
+# export FZF_CTRL_R_COMMAND='' Does not exist.
 export FZF_CTRL_R_OPTS=$OPTS_ALL$FZF_HIS
 
 export FZF_ALT_C_COMMAND='fd --type d --hidden'
 export FZF_ALT_C_OPTS=$OPTS_ALL$FZF_DIR$OPTS_TREE
 
-export FZF_TMUX_OPTS='-p '
+export FZF_TMUX_OPTS='-p'

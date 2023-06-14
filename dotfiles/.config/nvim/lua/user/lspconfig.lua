@@ -45,6 +45,12 @@ nvim_lsp['pyright'].setup{
     capabilities = capabilities,
     root_dir = nvim_lsp.util.root_pattern('.git'),
 }
+nvim_lsp['eslint'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    root_dir = nvim_lsp.util.root_pattern('.git'),
+}
 nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,
     flags = lsp_flags,

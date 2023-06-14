@@ -1,0 +1,2 @@
+#!/bin/zsh
+ssh $(cat ~/ssh_list | fzf-tmux -p --with-nth=1,3 | awk '{print "admin@"$NF}')
